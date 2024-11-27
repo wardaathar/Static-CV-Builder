@@ -1,11 +1,13 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    margin: 0;
+    background-color: white;
+    margin: 16px;
     padding: 150px;
-    
+    width: 150px;
+    box-shadow: #2c2c2c;
+     font-family: Arial, sans-serif;
+    margin-top: auto;    
 }
-
 .resume-container {
     display: flex;
     width: 90px;;
@@ -19,7 +21,6 @@ body {
     color: white;
     padding: 90px;
     width: 150px;
-    text-align: center;
     border-right: 5px solid pink;
 }
 .Profile{
