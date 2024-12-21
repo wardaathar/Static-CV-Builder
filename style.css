@@ -1,76 +1,154 @@
 body {
     font-family: Arial, sans-serif;
     background-color: white;
-    margin: 16px;
-    padding: 150px;
-    width: 150px;
+    margin: 0;
+    padding: 20px;  /* Padding ko adjust kiya */
     box-shadow: #2c2c2c;
-    margin-top: auto;    
+    display: flex;
+    justify-content: center;  /* Body ko center align kiya */
 }
+
 .resume-container {
     display: flex;
-    width: 90px;;
-    margin:0 auto;
-    background-color:white;
+    flex-wrap: wrap;  /* Flex ko wrap kar diya jisse layout adjust ho */
+    justify-content: center;
+    width: 100%;
+    max-width: 1200px;  /* Maximum width set kiya */
+    margin: 0 auto;
+    background-color: white;
     border-radius: 12px;
     box-shadow: 0 0 20px rgba(17, 18, 18, 0.391);
+    padding: 20px;
 }
+
 .left-section {
     background-color: #2c2c2c;
     color: white;
-    padding: 80px;
-    width: 150px;
+    padding: 20px;
+    flex: 1;  /* Left section ko flexible width dena */
+    min-width: 250px;  /* Minimum width set kiya */
     border-right: 3px solid pink;
-}
-.Profile{
-    width: 150px;
-    height: 150px;
-    border: 5px solid #e63946;
-    border-radius: 50%;
-    margin-top: 20%;
-    margin-bottom :30px ;
-
-}
-h1{
-    font-size: 24px;
-    margin: 10px 0;
-    margin-top: 30px;
     text-align: center;
 }
-h3{
+
+.Profile {
+    width: 120px;
+    height: 120px;
+    border: 5px solid #e63946;
+    border-radius: 50%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 24px;
+    margin: 10px 0;
+    text-align: center;
+}
+
+h3 {
     font-size: 18px;
-    padding: 2px;
-    margin: 20px 0 10px;
+    padding: 5px;
+    margin: 15px 0;
     border-radius: 10px;
     color: black;
     box-shadow: 0 0 15px palevioletred;
-    margin-top: 5%;
-    margin-bottom: 5%;
+    text-align: center;
 }
-.ul{
-    list-style-type: fill square;
-    padding: 10;
+
+.ul {
+    list-style-type: square;
+    padding: 10px;
     margin: 10px 0;
 }
-ul li{
-    margin
-    : 5px 0;
-}
-l.right-section {
 
+ul li {
+    margin: 5px 0;
+}
+
+.right-section {
     padding: 30px;
-    width: 80%;
+    flex: 2;  /* Right section ko zyada space diya */
+    min-width: 300px;  /* Minimum width set kiya */
 }
 
-button{
+button {
     font-family: Arial, sans-serif;
     margin-top: 9px;
     font-size: 15px;
-    box-shadow:rgb(32, 32, 43);
+    box-shadow: rgb(32, 32, 43);
     cursor: pointer;
     border-radius: 9px;
+    padding: 10px 20px; /* Button ka size adjust kiya */
+    border: none;
 }
-button:hover{
+
+button:hover {
     background-color: brown;
-    
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+    .resume-container {
+        flex-direction: column;  /* Container ko vertical stack karna */
+        padding: 10px;  /* Padding ko thoda kam kiya */
+    }
+
+    .left-section, .right-section {
+        width: 100%;  /* Left aur right sections ko full width dena */
+        border-right: none;  /* Border remove karna */
+    }
+
+    .Profile {
+        width: 100px;  /* Profile picture ko thoda chhota karna */
+        height: 100px;
+    }
+
+    h1 {
+        font-size: 20px;  /* Font size ko chhota karna */
+    }
+
+    h3 {
+        font-size: 16px;  /* Font size ko chhota karna */
+    }
+
+    .ul {
+        padding-left: 15px;  /* List ke padding ko adjust karna */
+    }
+
+    button {
+        width: 100%;  /* Button ko full width dena */
+        font-size: 14px;  /* Font size ko thoda chhota karna */
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 10px;  /* Body ka padding aur adjust kiya */
+    }
+
+    .resume-container {
+        padding: 10px;  /* Container ka padding aur adjust karna */
+    }
+
+    .Profile {
+        width: 80px;  /* Profile picture ko aur chhota karna */
+        height: 80px;
+    }
+
+    h1 {
+        font-size: 18px;  /* Font size ko aur chhota karna */
+    }
+
+    h3 {
+        font-size: 14px;  /* Font size ko aur chhota karna */
+    }
+
+    button {
+        font-size: 12px;  /* Button ka font size adjust karna */
+    }
+
+    .left-section {
+        padding: 15px;  /* Left section ka padding thoda kam karna */
+    }
 }
